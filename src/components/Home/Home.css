@@ -1,0 +1,30 @@
+
+/* top destination  */
+
+.top-destination-section{
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+.top-destination-card{
+    position: relative;
+}
+.top-destination-section img{
+    height: 150px;
+    border-radius: 8px;
+}
+.top-destination-text{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+}
+
+/* slider section */
+
+.carousel-caption{
+    background-color: rgba(127, 255, 212, .5);
+    border-radius: 10px;
+    color: black;
+}
