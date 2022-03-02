@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import Offers from '../Offers/Offers';
 import './Home.css';
 
 const Home = () => {
@@ -12,6 +13,9 @@ const Home = () => {
                 <img className='w-100' style={{height: "350px"}} src="https://images.pexels.com/photos/6043246/pexels-photo-6043246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
             </div>
         </section>
+
+        {/* main offerings */}
+        <Offers></Offers>
 
         <section className='my-4'>
             {/* top destination sections */}

@@ -6,6 +6,8 @@ import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Logout from './components/Logout/Logout';
 import Footer from './components/Footer/Footer';
+import Offer from './components/Offer/Offer';
+import AddOffer from './components/AddOffer/AddOffer';
 
 
 
@@ -21,12 +23,16 @@ function App() {
        <Route path="/home">
          <Home></Home>
        </Route>
+       <Route path="/addoffer">
+         <AddOffer></AddOffer>
+       </Route>
+       <Route path="/offer">
+         <Offer></Offer>
+       </Route>
        <Route path="/login">
          <Login></Login>
        </Route>
-       <Route path="/logout">
-         <Logout></Logout>
-       </Route>
+  
        <Route path="**">
          <NotFound></NotFound>
        </Route>

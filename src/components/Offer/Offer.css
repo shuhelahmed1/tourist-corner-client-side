@@ -1,0 +1,26 @@
+.offer-img{
+    border-radius: 5px;
+    height: 150px;
+}
+
+.offer-card {
+    box-shadow: 1px 1px 4px 1px #0b5dd74b;
+    height: 380px;
+    border-radius: 2px;
+}
+
+.offer-card p{
+    text-align: justify;
+    line-height: normal;
+    font-size: 12px;
+}
+
+/* css media query for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .offer-card {
+        height: 440px;
+    }
+    
+}
