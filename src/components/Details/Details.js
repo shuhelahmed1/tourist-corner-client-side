@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Details = () => {
@@ -7,13 +7,10 @@ const Details = () => {
     const [details, setDetails] = useState({});
     const {id} = useParams();
     useEffect(()=>{
-        fetch(`http://localhost:5000/offers/${id}`)
+        fetch(`https://guarded-inlet-05054.herokuapp.com/offers/${id}`)
         .then(res=>res.json())
         .then(data=> setDetails(data))
     },[])
-    const handlePurchase = () =>{
-        
-    }
     return (
         <>
         <section>
@@ -25,9 +22,7 @@ const Details = () => {
                     <h3>{details.name}</h3>
                     <p>{details.description}</p>
                     <hr />
-                    <p>User name: {user.displayName}</p>
-                    <p>Email: {user.email}</p>
-                    <button className='btn btn-danger'>Purchase ticket</button>
+                        <Link to="/offers/details/purchase" className='btn btn-danger'>Buy ticket</Link>
             </div>
         </section>
         </>

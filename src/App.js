@@ -11,6 +11,8 @@ import AuthProvider from './context/AuthProvider';
 import ManageOrders from './components/ManageOrders/ManageOrders';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Details from './components/Details/Details';
+import Purchase from './components/Purchase/Purchase';
+import MyOrders from './components/MyOrders/MyOrders';
 
 
 
@@ -30,11 +32,17 @@ function App() {
        <Route path="/addoffer">
          <AddOffer></AddOffer>
        </Route>
+       <PrivateRoute path="/offers/details/purchase">
+         <Purchase></Purchase>
+       </PrivateRoute>
        <PrivateRoute path="/offers/details/:id">
          <Details></Details>
        </PrivateRoute>
        <Route path="/offer">
          <Offer></Offer>
+       </Route>
+       <Route path="/myorders">
+         <MyOrders></MyOrders>
        </Route>
        <Route path="/login">
          <Login></Login>

@@ -1,0 +1,10 @@
+.purchase-form{
+    width: 80%;
+    margin: 0 auto;
+}
+.purchase-form input{
+    display: inline-block;
+    width: 100%;
+    padding: 8px 5px;
+    border-radius: 4px;
+}

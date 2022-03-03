@@ -11,7 +11,7 @@ const AddOffer = () => {
         const description = descriptionRef.current.value;
         const imgUrl = urlRef.current.value;
         const newOffer = {name, description, imgUrl};
-        fetch('http://localhost:5000/offers', {
+        fetch('https://guarded-inlet-05054.herokuapp.com/offers', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'
