@@ -48,7 +48,7 @@ const Home = () => {
             </div>
         </section>
 
-        <section className='w-50 mx-auto'>
+        <section className='w-75 mx-auto'>
 
             {/* review section */}
             <h2 className='text-center mb-4'>Reviews</h2>
@@ -60,8 +60,8 @@ const Home = () => {
       alt="First slide"
     />
     <Carousel.Caption className='carousel-caption'>
-      <h3>Shane Watson</h3>
-      <p>"Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!"</p>
+      <blockquote>"Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!"</blockquote>
+      <small>- Shane Watson</small>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -72,8 +72,8 @@ const Home = () => {
     />
 
     <Carousel.Caption>
-      <h3>David Warner</h3>
-      <p>"Kristy was extremely helpful ! Any questions we had were answered very quickly via email or phone call. Not my first time using travel online and definitely NOT my last !"</p>
+      <blockquote>"Kristy was extremely helpful ! Any questions we had were answered very quickly via email or phone call. Not my first time using travel online and definitely NOT my last !"</blockquote>
+      <small>- David Warner</small>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -84,8 +84,8 @@ const Home = () => {
     />
 
     <Carousel.Caption>
-      <h3>Steve Smith</h3>
-      <p>"Travel Online managed to secure us a free night in our chosen motel. Service was prompt, and will use the service again."</p>
+      <blockquote>"Travel Online managed to secure us a free night in our chosen motel. Service was prompt, and will use the service again."</blockquote>
+      <small>- Steve Smith</small>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

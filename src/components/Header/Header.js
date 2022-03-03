@@ -20,7 +20,7 @@ const Header = () => {
         }
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/manageorders">Manage Orders</Nav.Link>
-        }
+        }    
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/addoffer">Add Offer</Nav.Link>
         }

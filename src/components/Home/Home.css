@@ -24,7 +24,7 @@
 /* slider section */
 
 .carousel-caption{
-    background-color: rgba(127, 255, 212, .5);
+    background-color: rgba(0, 128, 0, 0.7);
     border-radius: 10px;
-    color: black;
+    color: white;
 }

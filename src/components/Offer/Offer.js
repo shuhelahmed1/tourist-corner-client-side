@@ -10,7 +10,7 @@ const Offer = ({offer}) => {
                 <div className='py-2'>
                     <h4>{offer.name}</h4>
                     <p>{offer.description}</p>
-                    <Link to={`/services/placeorder/${offer._id}`} className='btn btn-primary'>Buy ticket</Link>
+                    <Link to={`/offers/details/${offer._id}`} className='btn btn-danger'>Buy ticket</Link>
                 </div>
             </div>
         </div>

@@ -8,6 +8,9 @@ import Footer from './components/Footer/Footer';
 import Offer from './components/Offer/Offer';
 import AddOffer from './components/AddOffer/AddOffer';
 import AuthProvider from './context/AuthProvider';
+import ManageOrders from './components/ManageOrders/ManageOrders';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Details from './components/Details/Details';
 
 
 
@@ -27,6 +30,9 @@ function App() {
        <Route path="/addoffer">
          <AddOffer></AddOffer>
        </Route>
+       <PrivateRoute path="/offers/details/:id">
+         <Details></Details>
+       </PrivateRoute>
        <Route path="/offer">
          <Offer></Offer>
        </Route>
