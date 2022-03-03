@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Details = () => {
+    const {user} = useAuth();
     const [details, setDetails] = useState({});
     const {id} = useParams();
     useEffect(()=>{
@@ -9,6 +11,9 @@ const Details = () => {
         .then(res=>res.json())
         .then(data=> setDetails(data))
     },[])
+    const handlePurchase = () =>{
+        
+    }
     return (
         <>
         <section>
@@ -19,6 +24,10 @@ const Details = () => {
                 </div>
                     <h3>{details.name}</h3>
                     <p>{details.description}</p>
+                    <hr />
+                    <p>User name: {user.displayName}</p>
+                    <p>Email: {user.email}</p>
+                    <button className='btn btn-danger'>Purchase ticket</button>
             </div>
         </section>
         </>

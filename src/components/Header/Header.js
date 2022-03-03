@@ -14,7 +14,7 @@ const Header = () => {
     <Navbar.Collapse>
       <Nav className="me-auto">
         <Nav.Link style={{color: 'white'}} as={Link} to="/home">Home</Nav.Link>
-        <Nav.Link style={{color: 'white'}} as={Link} to="/login">Log In</Nav.Link>
+        
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/myorders">My Orders</Nav.Link>
         }
@@ -24,9 +24,11 @@ const Header = () => {
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/addoffer">Add Offer</Nav.Link>
         }
+        
         {
-          user.email && <button style={{padding: '0',marginRight: '10px'}} className='btn btn-danger' onClick={logout}>Log Out</button>
+          user.email ? <button style={{padding: '0',marginRight: '10px'}} className='btn btn-danger' onClick={logout}>Log Out</button> : <Nav.Link style={{color: 'white'}} as={Link} to="/login">Log In</Nav.Link>
         }
+
         {
           user.email && <small>User: {user.displayName}</small>
         }
