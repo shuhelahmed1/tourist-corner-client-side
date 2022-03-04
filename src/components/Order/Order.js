@@ -9,6 +9,7 @@ const Order = ({order}) => {
             <h5>{order.email}</h5>
             <h5>{order.address}</h5>
             <h5>{order.phone}</h5>
+            <button className='cancel-button'>Cancel</button>
         </div>
         </>
     );
