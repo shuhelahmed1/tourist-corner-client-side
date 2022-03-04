@@ -19,7 +19,7 @@ const Home = () => {
 
         <section className='my-4'>
             {/* top destination sections */}
-            <h2 className='text-center mb-4'>Top destinations</h2>
+            <h2 className='text-center mb-4'>Top Destinations</h2>
             <div className='d-grid top-destination-section'>
                 <div className='top-destination-card'>
                 <img className='w-100' src="https://image.freepik.com/free-photo/nyc-aerial-view-new-york-city-night_181624-45081.jpg" alt="" />

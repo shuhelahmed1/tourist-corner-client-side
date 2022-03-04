@@ -10,6 +10,7 @@ const MyOrders = () => {
     },[])
     return (
         <div>
+            <h2 className='my-3 text-center'>My Orders</h2>
             {
                 orders.map(order=> <Order key={order.phone} order={order}></Order>)
             }
