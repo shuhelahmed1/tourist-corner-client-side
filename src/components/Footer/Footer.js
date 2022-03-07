@@ -4,7 +4,8 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div>
-            <div className='footer-section p-3 m-auto my-2 text-white d-grid'>
+            <div className='footer-container'>
+                <div className='footer-section p-3 m-auto my-2 text-white d-grid'>
                     <div className='footer-address'>
                         <h3>Tourist Corner</h3>
                         <p>Tourist Corner is the country’s first and leading online travel aggregator. Initially started with the name Travel Booking BD, we had a dream to make travel easier for people.</p>
@@ -25,8 +26,9 @@ const Footer = () => {
                             <li>info@tc.com.bd, tc.dhaka@gmail.com</li>
                         </ul>
                     </div>
+                </div>
+                <p className='text-center text-white'>Copyright 2022 <span >&copy;</span> || Tourist Corner</p>
             </div>
-            <p className='text-center'>Copyright 2022 <span >&copy;</span> || Tourist Corner</p>
         </div> 
     );
 };

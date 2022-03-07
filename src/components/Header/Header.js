@@ -12,25 +12,27 @@ const Header = () => {
     <Navbar.Brand style={{color: 'white'}} as={Link} to="/home">Tourist Corner</Navbar.Brand>
     <Navbar.Toggle/>
     <Navbar.Collapse>
-      <Nav className="me-auto">
+      <Nav className="ms-auto">
         <Nav.Link style={{color: 'white'}} as={Link} to="/home">Home</Nav.Link>
-        
+
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/myorders">My Orders</Nav.Link>
         }
+
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/manageorders">Manage Orders</Nav.Link>
-        }    
+        }  
+
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/addoffer">Add Offer</Nav.Link>
-        }
-        
-        {
-          user.email ? <button style={{padding: '0',marginRight: '10px'}} className='btn btn-danger' onClick={logout}>Log Out</button> : <Nav.Link style={{color: 'white'}} as={Link} to="/login">Log In</Nav.Link>
         }
 
         {
           user.email && <small>User: {user.displayName}</small>
+        }
+        
+        {
+          user.email ? <button style={{padding: '0',marginRight: '10px'}} className='btn btn-danger' onClick={logout}>Log Out</button> : <Nav.Link style={{color: 'white'}} as={Link} to="/login">Log In</Nav.Link>
         }
         
       </Nav>

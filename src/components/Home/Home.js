@@ -4,13 +4,14 @@ import Offers from '../Offers/Offers';
 import './Home.css';
 
 const Home = () => {
+  console.log('hello')
     return (
         <>
         <section>
             {/* banner section */}
-
+        
             <div>
-                <img className='w-100' style={{height: "350px"}} src="https://images.pexels.com/photos/6043246/pexels-photo-6043246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                <img className='w-100' style={{height: "500px"}} src="https://i.ibb.co/8721wrh/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand-1-2.png" alt="BannerImage" />
             </div>
         </section>
 
@@ -48,40 +49,47 @@ const Home = () => {
             </div>
         </section>
 
-        <section className='w-75 mx-auto'>
+        <section className='w-50 mx-auto my-3'>
 
             {/* review section */}
             <h2 className='text-center mb-4'>Reviews</h2>
         <Carousel>
   <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://img.freepik.com/free-photo/confident-young-businessman-suit-standing-with-arms-folded_171337-18599.jpg?size=626&ext=jpg"
-      alt="First slide"
-    />
+    <div>
+      <img
+        className="w-100"
+        src="https://img.freepik.com/free-photo/confident-young-businessman-suit-standing-with-arms-folded_171337-18599.jpg?size=626&ext=jpg"
+        alt="First slide"
+      />
+    </div>
     <Carousel.Caption className='carousel-caption'>
-      <blockquote>"Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!"</blockquote>
-      <small>- Shane Watson</small>
+      <div>
+        <blockquote>"Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!"</blockquote>
+        <small>- Shane Watson</small>
+      </div>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://img.freepik.com/free-photo/happy-young-african-businessman_171337-736.jpg?size=626&ext=jpg"
-      alt="Second slide"
-    />
-
+    <div>
+      <img
+        className="w-100"
+        src="https://img.freepik.com/free-photo/happy-young-african-businessman_171337-736.jpg?size=626&ext=jpg"
+        alt="Second slide"
+      />
+    </div>
     <Carousel.Caption>
       <blockquote>"Kristy was extremely helpful ! Any questions we had were answered very quickly via email or phone call. Not my first time using travel online and definitely NOT my last !"</blockquote>
       <small>- David Warner</small>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://img.freepik.com/free-photo/photo-successful-handsome-business-man-with-his-team-working-office_496169-1638.jpg?size=626&ext=jpg"
-      alt="Third slide"
-    />
+    <div>
+      <img
+        className="w-100"
+        src="https://img.freepik.com/free-photo/photo-successful-handsome-business-man-with-his-team-working-office_496169-1638.jpg?size=626&ext=jpg"
+        alt="Third slide"
+      />
+    </div>
 
     <Carousel.Caption>
       <blockquote>"Travel Online managed to secure us a free night in our chosen motel. Service was prompt, and will use the service again."</blockquote>

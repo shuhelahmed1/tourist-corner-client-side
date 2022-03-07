@@ -6,10 +6,9 @@ const Order = ({order}) => {
         <>
         <div className='ordered-items d-grid'>
             <h5>{order.name}</h5>
-            <h5>{order.email}</h5>
-            <h5>{order.address}</h5>
-            <h5>{order.phone}</h5>
-            <button className='cancel-button'>Cancel</button>
+            <h5>k</h5>
+            <h5>h</h5>
+            <h5>h</h5>
         </div>
         </>
     );

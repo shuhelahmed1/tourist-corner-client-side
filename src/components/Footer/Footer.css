@@ -1,10 +1,14 @@
 /* footer section css */
 
+.footer-container{
+    width: 100%;
+    background-color: navy;
+    padding: 5px;
+}
 .footer-section{
-    width: 90%;
+    width: 80%;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #0d71fdde;
-    border-radius: 10px;
+    background-color: navy;
 }
 .footer-address ul, .footer-contact ul, .footer-branch ul{
     list-style: none;

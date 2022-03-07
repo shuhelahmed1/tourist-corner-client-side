@@ -26,15 +26,17 @@ const AddOffer = () => {
         e.preventDefault();
     }
     return (
-        <div>
-            <h3 className='text-center my-3'>Add an offer</h3>
+        <>
+            <div  className='addOfferFormSection my-5 py-4 mx-auto'>
+            <h3 className='text-center my-3'>Add an Offer</h3>
             <form className='addOfferForm' onSubmit={handleAddOffer}>
-                <p>Img url: <input className='w-75' type="text" ref={urlRef}/></p>
-                <p>Offer name: <input className='w-75' type="text" ref={nameRef}/></p>
-                <p>Offer description: <textarea className='w-75' name="" id="" cols="30" rows="5" ref={descriptionRef}></textarea></p>
+                <input placeholder='Img url' className='w-100 border-1 rounded my-3 p-2' type="text" ref={urlRef}/>
+                <input placeholder='Offer name' className='w-100 border-1 rounded p-2' type="text" ref={nameRef}/>
+                <textarea placeholder='Offer description' className='w-100 my-3 border-1 rounded p-2' name="" id="" cols="30" rows="5" ref={descriptionRef}></textarea>
                 <input className='btn btn-primary' type="submit" value='Submit'/>
             </form>
-        </div>
+            </div>
+        </>
     );
 };
 
