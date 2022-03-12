@@ -1,12 +1,7 @@
-.offer-img{
-    border-radius: 5px;
-    height: 150px;
-}
-
 .offer-card {
-    box-shadow: 1px 1px 4px 1px #0b5dd74b;
-    height: 380px;
-    border-radius: 2px;
+    box-shadow: 1px 1px 4px 1px grey;
+    height: 450px;
+    border-radius: 5px;
 }
 
 .offer-card p{
