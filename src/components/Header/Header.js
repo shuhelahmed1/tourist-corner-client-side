@@ -5,6 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Header.css';
 const Header = () => {
   const {user,logout} = useAuth();
+
     return (
         <div>
 <Navbar className='text-white' bg="primary" expand="md" collapseOnSelect>
