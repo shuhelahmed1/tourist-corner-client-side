@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './ReviewSlider.css';
 
 const reviews = [
-    {reviewImg: 'https://media.istockphoto.com/photos/portrait-of-a-mature-man-with-a-little-smile-at-the-camera-right-side-picture-id1277873802?k=20&m=1277873802&s=612x612&w=0&h=I3aEJcrZRFwZPSmf0jkQMFqDg_KxLnmo-t8bLi8gPpw=',
+    {reviewImg: 'https://i.ibb.co/cJNLyXM/portrait-of-a-mature-man-with-a-little-smile-at-the-camera-right-side-picture-id1277873802-k-20-m-12.jpg',
     review: '"Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!"'},
-    {reviewImg: 'https://media.istockphoto.com/photos/horizontal-portrait-of-a-serious-man-with-beard-picture-id506116452?k=20&m=506116452&s=612x612&w=0&h=PhfC8HDtQjU0jRKosIjoxzHFdRF6euOt7KFXDbCIgXM=',
+    {reviewImg: 'https://i.ibb.co/VDk6ZCr/horizontal-portrait-of-a-serious-man-with-beard-picture-id506116452-k-20-m-506116452-s-612x612-w-0-h.jpg',
     review: '"Kristy was extremely helpful ! Any questions we had were answered very quickly via email or phone call. Not my first time using travel online and definitely NOT my last !"'}
 ]
 
 let count = 0;
 export default function Slider(){
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    useEffect(()=>{
+        startSlider();
+    },[])
+    const startSlider = ()=>{
+        setInterval(()=>{
+            handleOnNextClick();
+        },3000)
+    }
     const handleOnNextClick = () => {
         count = (count + 1) % reviews.length;
         setCurrentIndex(count)
