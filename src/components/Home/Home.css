@@ -2,7 +2,6 @@
 /* top destination  */
 
 .top-destination-section{
-    grid-template-columns: repeat(3, 1fr);
     width: 80%;
     margin: 0 auto;
     grid-gap: 20px;
@@ -10,13 +9,18 @@
 .top-destination-card{
     position: relative;
 }
-.top-destination-section img{
+.top-destination-card:hover .top-destination-text{
+    left: 20px;
+    bottom: 20px;
+    transition: .5s;
+}
+.top-destination-img{
+    width: 100%;
     border-radius: 8px;
 }
 .top-destination-text{
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    left: -100000px;
     color: white;
 }
 
@@ -28,7 +32,6 @@
 }
 
 .review-img{
-    display: block;
     width: 200px;
     height: 200px;
     border-radius: 50%;

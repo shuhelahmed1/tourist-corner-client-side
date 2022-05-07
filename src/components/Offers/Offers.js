@@ -20,7 +20,7 @@ const Offers = () => {
                 </Spinner>
             </div>
              :
-        <div className='offers-section d-grid my-4'>
+        <div className='offers-section grid grid-cols-3 my-1.5'>
             {
                 offers.map(offer => <Offer key={Offer._id} offer={offer}></Offer>)
             }

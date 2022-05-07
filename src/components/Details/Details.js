@@ -15,7 +15,7 @@ const Details = () => {
         <>
         <section>
             <h2 className='mt-3 text-center'>Details information</h2>
-            <div className='w-50 mx-auto my-4'>
+            <div className='w-50 mx-auto my-1.5'>
                 <div>
                     <img className='w-75 border rounded' src={details.imgUrl} alt="" />
                 </div>

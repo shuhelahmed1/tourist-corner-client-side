@@ -1,6 +1,6 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
 import Offers from '../Offers/Offers';
+import ReviewSlider from '../ReviewSlider/ReviewSlider'
 import './Home.css';
 
 const Home = () => {
@@ -11,49 +11,53 @@ const Home = () => {
             {/* banner section */}
         
             <div>
-                <img className='w-100' style={{height: "500px"}} src="https://i.ibb.co/8721wrh/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand-1-2.png" alt="BannerImage" />
+                <img className='w-full' style={{height: "500px"}} src="https://i.ibb.co/8721wrh/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand-1-2.png" alt="BannerImage" />
             </div>
         </section>
 
         {/* main offerings */}
         <Offers></Offers>
 
-        <section className='my-4'>
+        <section className='my-1.5'>
             {/* top destination sections */}
-            <h2 className='text-center mb-4'>Top Destinations</h2>
-            <div className='d-grid top-destination-section'>
+            <h2 className='text-center mb-3'>Top Destinations</h2>
+            <div className='grid grid-cols-3 top-destination-section'>
                 <div className='top-destination-card'>
-                <img className='w-100' src="https://image.freepik.com/free-photo/nyc-aerial-view-new-york-city-night_181624-45081.jpg" alt="" />
+                  <img className='top-destination-img' src="https://image.freepik.com/free-photo/nyc-aerial-view-new-york-city-night_181624-45081.jpg" alt="" />
+                
                 <h4 className='top-destination-text'>New York</h4>
                 </div>
                 <div className='top-destination-card'>
-                <img className='w-100' src="https://image.freepik.com/free-photo/big-ben-house-parliament-night-london-united-kingdom_268835-1396.jpg" alt="" />
+                  <img className='top-destination-img' src="https://image.freepik.com/free-photo/big-ben-house-parliament-night-london-united-kingdom_268835-1396.jpg" alt="" />
+               
                 <h4 className='top-destination-text'>London</h4>
                 </div>
                 <div className='top-destination-card'>
-                <img className='w-100' src="https://image.freepik.com/free-photo/famous-eiffel-tower-paris-with-gorgeous-colors_268835-830.jpg" alt="" />
+                <img className='top-destination-img' src="https://image.freepik.com/free-photo/famous-eiffel-tower-paris-with-gorgeous-colors_268835-830.jpg" alt="" />
                 <h4 className='top-destination-text'>Paris</h4>
                 </div>
                 <div className='top-destination-card'>
-                <img className='w-100' src="https://image.freepik.com/free-photo/modetn-city-luxury-center-dubai-united-arab-emirates_231208-7596.jpg" alt="" />
+                <img className='top-destination-img' src="https://image.freepik.com/free-photo/modetn-city-luxury-center-dubai-united-arab-emirates_231208-7596.jpg" alt="" />
                 <h4 className='top-destination-text'>Dubai</h4>
                 </div>
                 <div className='top-destination-card'>
-                <img className='w-100' src="https://image.freepik.com/free-photo/scenic-sunrise-ocean-istanbul-turkey_53876-14875.jpg" alt="" />
+                <img className='top-destination-img' src="https://image.freepik.com/free-photo/scenic-sunrise-ocean-istanbul-turkey_53876-14875.jpg" alt="" />
                 <h4 className='top-destination-text'>Turkey</h4>
                 </div>
                 <div className='top-destination-card'>
-                <img className='w-100' src="https://img.freepik.com/free-photo/roman-coliseum-seen-from-afar_1219-15.jpg?t=st=1646138173~exp=1646138773~hmac=eac923e87dac1e7774863b76ef1998cd8ffd99018696d132182ab904544a7a63&w=740" alt="" />
+                <img className='top-destination-img' src="https://cdn.pixabay.com/photo/2021/08/03/11/48/canal-6519196__340.jpg" alt="" />
                 <h4 className='top-destination-text'>Italy</h4>
                 </div>
             </div>
         </section>
 
-        <section style={{height: '440px'}} className='w-75 mx-auto my-5'>
+        {/* review section */}
 
-            {/* review section */}
-            <h2 className='text-center mb-4'>Reviews</h2>
-        <Carousel>
+        <section className='w-9/12 mx-auto my-5'>
+            <h2 className='text-center mb-3'>Reviews</h2>
+            <ReviewSlider></ReviewSlider>
+            
+        {/* <Carousel>
 
   <Carousel.Item>
     <div className='review-card'>
@@ -97,7 +101,7 @@ const Home = () => {
     </div>
   </Carousel.Item>
 
-</Carousel>
+</Carousel> */}
         </section>
         </>
     );

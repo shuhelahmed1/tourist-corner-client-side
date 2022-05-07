@@ -30,9 +30,9 @@ const AddOffer = () => {
             <div  className='addOfferFormSection my-5 py-4 mx-auto'>
             <h3 className='text-center my-3'>Add an Offer</h3>
             <form className='addOfferForm' onSubmit={handleAddOffer}>
-                <input placeholder='Img url' className='w-100 border-1 rounded my-3 p-2' type="text" ref={urlRef}/>
-                <input placeholder='Offer name' className='w-100 border-1 rounded p-2' type="text" ref={nameRef}/>
-                <textarea placeholder='Offer description' className='w-100 my-3 border-1 rounded p-2' name="" id="" cols="30" rows="5" ref={descriptionRef}></textarea>
+                <input placeholder='Img url' className='w-full border-1 rounded my-3 p-2' type="text" ref={urlRef}/>
+                <input placeholder='Offer name' className='w-full border-1 rounded p-2' type="text" ref={nameRef}/>
+                <textarea placeholder='Offer description' className='w-full my-3 border-1 rounded p-2' name="" id="" cols="30" rows="5" ref={descriptionRef}></textarea>
                 <input className='btn btn-primary' type="submit" value='Submit'/>
             </form>
             </div>
