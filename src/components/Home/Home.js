@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from '../NavBar/NavBar';
 import Offers from '../Offers/Offers';
 import ReviewSlider from '../ReviewSlider/ReviewSlider'
 import './Home.css';
@@ -6,6 +7,7 @@ import './Home.css';
 const Home = () => {
     return (
         <>
+        <NavBar></NavBar>
         <section>
             {/* banner section */}
         

@@ -20,7 +20,7 @@ function App() {
     <div>
       <AuthProvider>
       <BrowserRouter>
-     <Header></Header>
+     {/* <Header></Header> */}
      <Switch>
        <Route exact path="/">
          <Home></Home>
