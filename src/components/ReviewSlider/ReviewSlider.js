@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './ReviewSlider.css';
+import {AiOutlineVerticalRight,AiOutlineVerticalLeft} from 'react-icons/ai';
 
 const reviews = [
     {reviewImg: 'https://i.ibb.co/cJNLyXM/portrait-of-a-mature-man-with-a-little-smile-at-the-camera-right-side-picture-id1277873802-k-20-m-12.jpg',
@@ -9,19 +10,38 @@ const reviews = [
 ]
 
 let count = 0;
+let slideInterval;
 export default function Slider(){
     const [currentIndex, setCurrentIndex] = useState(0);
+    const slideRef = useRef();
+
+    const removeAnimation = () =>{
+        slideRef.current.classList.remove('fade-anim');
+    }
+
     useEffect(()=>{
+        slideRef.current.addEventListener('animationend',removeAnimation);
+        slideRef.current.addEventListener('mouseenter',pauseSlider);
+        slideRef.current.addEventListener('mouseleave',startSlider);
         startSlider();
+        return ()=>{
+            pauseSlider();
+        };
     },[])
     const startSlider = ()=>{
-        setInterval(()=>{
+        slideInterval = setInterval(()=>{
             handleOnNextClick();
         },3000)
     }
+
+    const pauseSlider = () =>{
+        clearInterval(slideInterval);
+    }
+    
     const handleOnNextClick = () => {
         count = (count + 1) % reviews.length;
-        setCurrentIndex(count)
+        setCurrentIndex(count);
+        slideRef.current.classList.add("fade-anim");
     }
     const handleOnPrevClick = () => {
         const reviewsLength = reviews.length;
@@ -29,14 +49,14 @@ export default function Slider(){
         setCurrentIndex(count);
     }
 
-    return <div className="w-full select-none relative">
+    return <div ref={slideRef} className="w-full select-none relative">
         <div>
             <img className="review-img mx-auto border rounded-circle" src={reviews[currentIndex]?.reviewImg} alt="" />
             <p>{reviews[currentIndex]?.review}</p>
         </div>
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-center">
-            <button onClick={handleOnPrevClick}>prv</button>
-            <button onClick={handleOnNextClick}>nxt</button>
+            <button onClick={handleOnPrevClick}><AiOutlineVerticalRight/></button>
+            <button onClick={handleOnNextClick}><AiOutlineVerticalLeft/></button>
         </div> 
     </div>
 }

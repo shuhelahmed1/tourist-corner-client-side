@@ -22,7 +22,7 @@ const Offers = () => {
              :
         <div className='offers-section grid grid-cols-3 my-1.5'>
             {
-                offers.map(offer => <Offer key={Offer._id} offer={offer}></Offer>)
+                offers.map(offer => <Offer key={offer._id} offer={offer}></Offer>)
             }
         </div>
         }

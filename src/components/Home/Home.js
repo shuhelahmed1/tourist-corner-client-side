@@ -4,7 +4,6 @@ import ReviewSlider from '../ReviewSlider/ReviewSlider'
 import './Home.css';
 
 const Home = () => {
-  console.log('hello')
     return (
         <>
         <section>

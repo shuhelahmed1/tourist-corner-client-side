@@ -27,10 +27,6 @@ const Header = () => {
         {
           user.email && <Nav.Link style={{color: 'white'}} as={Link} to="/addoffer">Add Offer</Nav.Link>
         }
-
-        {
-          user.email && <small>User: {user.displayName}</small>
-        }
         
         {
           user.email ? <button style={{padding: '0',marginRight: '10px'}} className='btn btn-danger' onClick={logout}>Log Out</button> : <Nav.Link style={{color: 'white'}} as={Link} to="/login">Log In</Nav.Link>
