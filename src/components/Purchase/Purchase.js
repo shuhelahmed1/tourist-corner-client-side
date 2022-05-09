@@ -35,7 +35,7 @@ const handleAddOrder = e =>{
                 <p>Email: <input type="email" value={user.email} ref={emailRef}/></p>
                 <p><input placeholder="address" type="text" ref={addressRef}/></p>
                 <p><input placeholder="phone" type="text" ref={phoneRef}/></p>
-                <p><input type="submit" value="submit"/></p>
+                <p><input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" value="submit"/></p>
             </form>
         </div>
     );

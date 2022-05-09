@@ -1,6 +1,5 @@
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
@@ -12,6 +11,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Details from './components/Details/Details';
 import Purchase from './components/Purchase/Purchase';
 import MyOrders from './components/MyOrders/MyOrders';
+import NavBar from './components/NavBar/NavBar';
 
 
 
@@ -20,7 +20,7 @@ function App() {
     <div>
       <AuthProvider>
       <BrowserRouter>
-     {/* <Header></Header> */}
+     <NavBar></NavBar>
      <Switch>
        <Route exact path="/">
          <Home></Home>

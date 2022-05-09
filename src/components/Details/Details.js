@@ -22,7 +22,7 @@ const Details = () => {
                     <h3>{details.name}</h3>
                     <p>{details.description}</p>
                     <hr />
-                        <Link to="/offers/details/purchase" className='btn btn-danger'>Buy ticket</Link>
+                        <Link to="/offers/details/purchase" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Buy ticket</Link>
             </div>
         </section>
         </>
