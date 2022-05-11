@@ -6,8 +6,8 @@ initializeAuthentication();
 const Login = () => {
     const {handleGoogleLogIn} = useAuth();
     return (
-        <section>
-            <button onClick={handleGoogleLogIn} className='btn btn-primary d-block mx-auto mt-5'>Google Log In</button>
+        <section className='text-center my-4'>
+            <button onClick={handleGoogleLogIn} className='bg-orange-400 p-2 hover:bg-orange-600 rounded'>Login using Google</button>
         </section>
     );
 };
