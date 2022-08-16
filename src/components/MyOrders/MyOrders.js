@@ -32,7 +32,7 @@ const MyOrders = () => {
         <div className='w-75 mx-auto'>
             <h2 className='my-3 text-center'>My Orders</h2>
             {
-                orders.map(order=> <li key={order.phone}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></li>)
+                orders.map(order=> <li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></li>)
             }
         </div>
     );

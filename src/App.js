@@ -12,8 +12,7 @@ import Details from './components/Details/Details';
 import Purchase from './components/Purchase/Purchase';
 import MyOrders from './components/MyOrders/MyOrders';
 import NavBar from './components/NavBar/NavBar';
-
-
+import UpdateOrders from './components/UpdateOrders/UpdateOrders';
 
 function App() {
   return (
@@ -42,6 +41,9 @@ function App() {
        </PrivateRoute>
        <Route path="/myorders">
          <MyOrders></MyOrders>
+       </Route>
+       <Route path="/updateorders">
+         <UpdateOrders></UpdateOrders>
        </Route>
        <Route path="/login">
          <Login></Login>
