@@ -42,7 +42,7 @@ function App() {
        <Route path="/myorders">
          <MyOrders></MyOrders>
        </Route>
-       <Route path="/updateorders">
+       <Route path="/orders/:id">
          <UpdateOrders></UpdateOrders>
        </Route>
        <Route path="/login">
