@@ -26,7 +26,6 @@ const NavBar = () => {
            <NavItem content='Home' href='/home'/>
            <NavItem content='Add Offer' href='/addoffer'/>
            <NavItem content='My Orders' href='/myorders'/>
-           <NavItem content='Update Orders' href='/updateorders'/>
            {
           user.email ? <button style={{padding: '0',marginRight: '10px'}} className='btn btn-danger' onClick={logout}>Log Out</button> : 
           <NavItem  href='/login' content='Log In' />
