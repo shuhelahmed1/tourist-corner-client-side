@@ -1,7 +1,7 @@
 # Tourist Corner
 ## A MERN Stack Tourism Agency Website
 
-* [Live firebase website](https://tourist-corner.web.app)
+* [Live Firebase Website](https://tourist-corner.web.app)
 * [Github Client](https://github.com/shuhelahmed1/tourist-corner-client-side)
 * [Github Server](https://github.com/shuhelahmed1/tourist-corner-server-side)
 
