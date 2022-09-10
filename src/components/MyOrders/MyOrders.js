@@ -31,11 +31,24 @@ const MyOrders = () => {
 
     return (
         <div className='w-75 mx-auto'>
-            <h2 className='my-3 text-center'>My Orders</h2>
+            <h2 className='my-3 text-center text-xl font-bold'>My Orders</h2>
             {
-                orders.map(order=> <li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button>
-                <Link to={`/orders/${order._id}`}>Update Order</Link>
-                </li>)
+                orders.map(order=> 
+                    <table className='order-table' key={order._id}>
+                        <tr>        
+                            <td>{order.name}</td>
+                            <td>{order.email}</td>
+                            <td>{order.address}</td>
+                            <td>{order.phone}</td>
+                            <td>{order._id}</td>
+                            <td><button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></td>
+                            <td><Link to={`/orders/${order._id}`}>Update Order</Link></td>
+                        </tr>
+                    </table>
+                // <li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button>
+                // <Link to={`/orders/${order._id}`}>Update Order</Link>
+                // </li>
+                )
             }
         </div>
     );

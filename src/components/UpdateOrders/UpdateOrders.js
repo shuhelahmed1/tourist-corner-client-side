@@ -29,9 +29,9 @@ const UpdateOrders = () => {
     return (
         <div>
             <h1>Order ID: {id}</h1>
-            <p>Adress: <input type="text" ref={addressRef}/></p>
-            <p>Phone: <input type="text" ref={phoneRef}/></p>
-            <button onClick={()=>handleUpdate(id)}>Update</button>
+            <p>Adress: <input className='border-2' type="text" ref={addressRef}/></p>
+            <p>Phone: <input className='border-2' type="text" ref={phoneRef}/></p>
+            <button className='border-2 px-2' onClick={()=>handleUpdate(id)}>Update</button>
         </div>
     );
 };
