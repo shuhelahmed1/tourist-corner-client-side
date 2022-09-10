@@ -1,15 +1,20 @@
 import React, { useRef } from 'react';
+
 import './AddOffer.css';
 
 const AddOffer = () => {
     const nameRef = useRef();
     const descriptionRef = useRef();
     const urlRef = useRef();
+    const fileRef = useRef('');
     // const textRef = useRef();
     const handleAddOffer = e =>{
+        e.preventDefault();
         const name = nameRef.current.value;
         const description = descriptionRef.current.value;
         const imgUrl = urlRef.current.value;
+        const file = fileRef.current.value;
+        console.log(file)
         const newOffer = {name, description, imgUrl};
         fetch('https://guarded-inlet-05054.herokuapp.com/offers', {
             method:'POST',
@@ -23,7 +28,6 @@ const AddOffer = () => {
             alert('Successfully offer added....');
             e.target.reset();
         })
-        e.preventDefault();
     }
     return (
         <>
@@ -31,6 +35,7 @@ const AddOffer = () => {
             <h3 className='text-center my-3'>Add an Offer</h3>
             <form className='addOfferForm' onSubmit={handleAddOffer}>
                 <input placeholder='Img url' className='w-full border-1 rounded my-3 p-2' type="text" ref={urlRef}/>
+                <input placeholder='Upload file' className='w-full border-1 rounded my-3 p-2' type="file" ref={fileRef}/>
                 <input placeholder='Offer name' className='w-full border-1 rounded p-2' type="text" ref={nameRef}/>
                 <textarea placeholder='Offer description' className='w-full my-3 border-1 rounded p-2' name="" id="" cols="30" rows="5" ref={descriptionRef}></textarea>
                 <input className='btn btn-primary' type="submit" value='Submit'/>

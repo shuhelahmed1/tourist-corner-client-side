@@ -20,7 +20,7 @@ const Home = () => {
 
         <section className='my-1.5'>
             {/* top destination sections */}
-            <h2 className='text-center mb-3'>Top Destinations</h2>
+            <h2 className='text-center my-4 text-3xl font-bold'>Top Destinations</h2>
             <div className='grid grid-cols-3 top-destination-section'>
                 <div className='top-destination-card'>
                   <img className='top-destination-img' src="https://image.freepik.com/free-photo/nyc-aerial-view-new-york-city-night_181624-45081.jpg" alt="" />
@@ -54,7 +54,7 @@ const Home = () => {
         {/* review section */}
 
         <section className='w-9/12 mx-auto my-5'>
-            <h2 className='text-center mb-3'>Reviews</h2>
+            <h2 className='text-center my-4 text-3xl font-bold'>Reviews</h2>
             <ReviewSlider></ReviewSlider>
             
         {/* <Carousel>

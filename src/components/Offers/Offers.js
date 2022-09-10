@@ -12,7 +12,7 @@ const Offers = () => {
     },[])
     return (
         <>
-        <h2 className='text-center mt-4'>Main Offers</h2>
+        <h2 className='text-center my-4 text-3xl font-bold'> Main Offers</h2>
         { offers.length === 0 ?
             <div className='spinner-section'>
                 <Spinner className='spinner' animation="border" role="status">
