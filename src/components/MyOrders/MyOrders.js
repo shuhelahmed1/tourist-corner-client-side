@@ -5,7 +5,7 @@ import './MyOrders.css';
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(()=>{
-        fetch('https://guarded-inlet-05054.herokuapp.com/orders')
+        fetch('https://tourist-corner.vercel.app/orders')
         .then(res=>res.json())
         .then(data=> setOrders(data))
     },[])
@@ -14,7 +14,7 @@ const MyOrders = () => {
     const handleDeleteOrder = id =>{
         const confirm = window.confirm('Are you sure to cancel the order.');
         if(confirm){
-            const url = `https://guarded-inlet-05054.herokuapp.com/orders/${id}`;
+            const url = `https://tourist-corner.vercel.app/orders/${id}`;
         fetch(url , {
             method: 'DELETE'
         })

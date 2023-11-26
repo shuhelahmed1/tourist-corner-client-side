@@ -7,7 +7,7 @@ const Details = () => {
     const [details, setDetails] = useState({});
     const {id} = useParams();
     useEffect(()=>{
-        fetch(`https://guarded-inlet-05054.herokuapp.com/offers/${id}`)
+        fetch(`https://tourist-corner.vercel.app/offers/${id}`)
         .then(res=>res.json())
         .then(data=> setDetails(data))
     },[])

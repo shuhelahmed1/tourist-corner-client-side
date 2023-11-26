@@ -6,7 +6,7 @@ import './Offers.css';
 const Offers = () => {
     const [offers, setOffers] = useState([]);
     useEffect(()=>{
-        fetch('https://guarded-inlet-05054.herokuapp.com/offers')
+        fetch('https://tourist-corner.vercel.app/offers')
         .then(res=>res.json())
         .then(data=> setOffers(data));
     },[])

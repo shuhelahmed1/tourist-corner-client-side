@@ -16,7 +16,7 @@ const AddOffer = () => {
         const file = fileRef.current.value;
         console.log(file)
         const newOffer = {name, description, imgUrl};
-        fetch('https://guarded-inlet-05054.herokuapp.com/offers', {
+        fetch('https://tourist-corner.vercel.app/offers', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

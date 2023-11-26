@@ -10,7 +10,7 @@ const UpdateOrders = () => {
         const address = addressRef?.current?.value;
         const phone = phoneRef?.current?.value;
         const updatedOrder = {address, phone}
-        fetch(`https://guarded-inlet-05054.herokuapp.com/orders/${id}`,{
+        fetch(`https://tourist-corner.vercel.app/orders/${id}`,{
         method: 'PUT',
         headers: {
           'content-type': 'application/json'

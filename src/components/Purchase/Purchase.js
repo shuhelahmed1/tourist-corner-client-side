@@ -14,7 +14,7 @@ const handleAddOrder = e =>{
     const address = addressRef.current.value;
     const phone = phoneRef.current.value;
     const newOrder = {name, email, address, phone};
-    fetch('https://guarded-inlet-05054.herokuapp.com/orders', {
+    fetch('https://tourist-corner.vercel.app/orders', {
         method:'POST',
         headers:{
             'content-type': 'application/json'
